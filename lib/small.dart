@@ -9,7 +9,7 @@ class SmallChild extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
           height: 1927,
-          width: 375,
+          width: 468,
           decoration: const BoxDecoration(
             // borderRadius: BorderRadius.all(Radius.circular(20)),
             gradient: LinearGradient(

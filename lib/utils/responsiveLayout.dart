@@ -5,8 +5,8 @@ class ResponsiveLayout extends StatelessWidget {
   final Widget mediumScreen;
   final Widget smallScreen;
   static const double SMALL = 320;
-  static const double MEDIUM = 760;
-  static const double LARGE = 1024;
+  static const double MEDIUM = 468;
+  static const double LARGE = firebase;
 
   const ResponsiveLayout(
       {Key? key,

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Flutter Landing Page',
+    title: 'DroppingBuy',
     debugShowCheckedModeBanner: true,
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: HomePage(),
+    home: const HomePage(),
   ));
 }
 

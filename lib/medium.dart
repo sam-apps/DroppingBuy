@@ -1,5 +1,6 @@
 import 'package:droppingbuy/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 
 class MediumChild extends StatelessWidget {
@@ -9,7 +10,7 @@ class MediumChild extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 3170,
-      width: 768,
+      width: 1200,
       child: Container(
           height: 1927,
           width: 76,
@@ -41,8 +42,9 @@ class MediumChild extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const <Widget>[
-                            Text(
+                            AutoSizeText(
                               "GROCERIES\nRIGHT TO\nYOUR DOOR!",
+                              maxLines: 3,
                               style: TextStyle(
                                   fontSize: 100,
                                   fontWeight: FontWeight.bold,

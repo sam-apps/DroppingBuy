@@ -1,6 +1,7 @@
 import 'package:droppingbuy/body.dart';
 import 'package:flutter/material.dart';
 import 'package:droppingbuy/theme.dart';
+import 'package:droppingbuy/utils/responsiveLayout.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -44,6 +45,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         duration: const Duration(milliseconds: 500), curve: Curves.linear);
   }
 
+  double _padding(BuildContext context){
+    if(ResponsiveLayout.isLargeScreen(context)){
+      return 100.0;
+    }else if(ResponsiveLayout.isMediumScreen(context)){
+      return 50.0;
+    }else{
+      return 25.0;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,16 +64,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           child: Column(
             children: <Widget>[Body()],
           )),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 50, right: 50),
-        child: _showBackToTopButton == false
+      floatingActionButton:  _showBackToTopButton == false
             ? null
             : FloatingActionButton(
                 backgroundColor: MyColors.colorWhite,
                 foregroundColor: MyColors.colorTwelve,
                 onPressed: _scrollToTop,
                 child: const Icon(Icons.arrow_upward),
-              ),
       ),
     );
   }
